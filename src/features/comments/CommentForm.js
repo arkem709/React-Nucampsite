@@ -3,8 +3,8 @@ import {Button, Modal, ModalHeader, ModalBody, FormGroup, Label} from "reactstra
 import {Formik, Field, Form, ErrorMessage} from "formik";
 import {validateCommentForm} from "../../utils/validateCommentForm";
 
-const CommentForm = ( campsiteId ) => {
-   
+const CommentForm = ( {campsiteId} ) => {
+
    const [modalOpen, setModalOpen] = useState(false);
 
    const handleSubmit = (values) => {
