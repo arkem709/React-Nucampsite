@@ -15,7 +15,7 @@ const CommentForm = ( {campsiteId} ) => {
          text: values.commentText,
       };
       console.log(comment);
-      setModalOpen(modalOpen(false));
+      setModalOpen(false);
    };
 
    return (
@@ -26,11 +26,7 @@ const CommentForm = ( {campsiteId} ) => {
          </Button>
 
          <Modal isOpen={modalOpen}>
-            <ModalHeader
-               toggle={() => {
-                  setModalOpen(false);
-               }}
-            >
+            <ModalHeader toggle={() => setModalOpen(false)}>
                Add Comment
             </ModalHeader>
             <ModalBody>
